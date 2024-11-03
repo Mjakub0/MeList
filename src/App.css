@@ -1,38 +1,153 @@
+/* Základný styling pre tmavý režim */
+body {
+  background-color: #1e1e2f;
+  color: #f1f1f1;
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
 .App {
   text-align: center;
+  padding: 20px;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+/* Styling pre formuláre */
+form,
+.list {
+  background-color: #2c2c3e;
+  padding: 20px;
+  margin: 20px auto;
+  width: 100%;
+  max-width: 400px;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.4);
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+/* Vstupné polia a tlačidlá */
+input[type="text"],
+input[type="email"] {
+  width: 100%;
+  padding: 10px;
+  margin: 8px 0;
+  box-sizing: border-box;
+  border-radius: 6px;
+  border: none;
+  background-color: #3a3a4e;
+  color: #f1f1f1;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+button {
+  padding: 10px 15px;
+  margin: 10px;
+  border-radius: 6px;
+  border: none;
+  cursor: pointer;
+  background-color: #4a4a6a;
+  color: #f1f1f1;
+  transition: background-color 0.3s ease;
+}
+
+button:hover {
+  background-color: #5c5c7f;
+}
+
+/* Rozloženie zoznamov */
+.lists {
   display: flex;
-  flex-direction: column;
-  align-items: center;
+  flex-wrap: wrap;
+  gap: 20px;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
 }
 
-.App-link {
-  color: #61dafb;
+.list-name {
+  background-color: #2c2c3e;
+  padding: 15px;
+  width: 180px;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: transform 0.2s ease, background-color 0.3s ease;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.list-name:hover {
+  background-color: #353547;
+  transform: translateY(-4px);
 }
+
+/* Položky v zozname */
+ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+li {
+  padding: 10px;
+  background-color: #3a3a4e;
+  margin-bottom: 8px;
+  border-radius: 6px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  transition: background-color 0.3s ease;
+}
+
+li:hover {
+  background-color: #4a4a6a;
+}
+
+li.done {
+  text-decoration: line-through;
+  color: #a0a0a0;
+}
+
+/* Špecifické štýly pre tlačidlá */
+button[type="button"] {
+  background: none;
+  color: #9a9ad4;
+  border: none;
+  cursor: pointer;
+  text-decoration: underline;
+}
+
+button[type="button"]:hover {
+  color: #b5b5e0;
+}
+
+
+/* Formulár pre pridanie nového zoznamu */
+.add-list-form {
+  background-color: #2c2c3e;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+  margin-top: 20px;
+  max-width: 400px;
+  margin: 0 auto;
+}
+
+.add-list-form input[type="text"] {
+  width: 100%;
+  padding: 10px;
+  margin: 8px 0;
+  border-radius: 6px;
+  border: none;
+  background-color: #3a3a4e;
+  color: #f1f1f1;
+}
+
+.add-list-form button {
+  padding: 10px 15px;
+  margin: 10px 5px;
+  border-radius: 6px;
+  border: none;
+  cursor: pointer;
+  background-color: #4a4a6a;
+  color: #f1f1f1;
+  transition: background-color 0.3s ease;
+}
+
+.add-list-form button:hover {
+  background-color: #5c5c7f;
+}
+
